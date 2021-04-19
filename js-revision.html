@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Revision</title>
+</head>
+<style>
+    .bg-primary {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <button name="click" id="click">Click</button>
+    <h1 class="click">hello</h1>
+    <script>
+        // console.log("Hello");
+        // console.warn("Hello");
+        // console.error("Hello");
+        // // alert("Hello");
+        // document.write("Hello");
+
+        // var num = 23;
+        // var num2 = 33;
+        // document.write(num + num2);
+
+        // var arr = [1, 2, 3, "babloo", 4, 4];
+        // console.log(arr);                                //array in javascript
+        // var und;
+        // // console.log(und);
+
+        // function avg(a, b) {
+        //     return (a + b) / 2;
+        // }                                                function in javascript
+
+        // c = avg(2, 3);                                    //if c not declared then also used
+        // console.log(c);
+
+
+
+        // age = 2;
+        // if (age > 2) {
+        //     console.log("kid")
+        // } else {                                 if else statement            
+        //     console.log("kid")
+        // }                                                    always use (let) not (var)
+
+        // arr = [1, 2, 3, 4, 5];
+        // for (i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }                                                                 loops in javascript
+
+
+        // let a = 10;
+        // const b = 10;
+        // console.log(++b);                                    (const) used when dont want to change any variable, value fixed
+
+
+
+        // arr = [1, 2, 3, "camera", "fan", null, true];             //Array methods
+
+        // console.log(arr.length);
+        // arr.pop()                                                pop last element
+        // console.log(arr);
+        // arr.push(4);                                             push an element in last
+        // console.log(arr);
+        // arr.shift();
+        // console.log(arr);                                        shift doesnt print first element
+
+        // arr.unshift("Rishabh");                                      unshift will add element in array in first position
+        // console.log(arr);
+
+
+        // arr.toString();                                                      convert everthing to String
+        // arr.sort();                                                           will sort elements
+
+
+
+
+        // str = "RishabhRishabh is good boy"; //String methods
+        // console.log(str.length);                                              gives lenght of String
+        // console.log(str.indexOf("is"));                                           gives index of first occurence of word
+        // console.log(str.lastIndexOf("is"));                                  gives lastindex of word
+
+        // console.log(str.slice(1, 3));                                            slice in string
+
+        // str.replace("Rishabh", "Rohan");
+        //                                                                          // replace a word with another
+        // console.log(str);
+
+
+        // let myDate = new Date(); //prints date                              //      Date Methods
+        // console.log(myDate);
+        // console.log(myDate.getTime());
+        // console.log(myDate.getFullYear()); //outputs year
+        // console.log(myDate.getDay());
+        // console.log(myDate.getMinutes());
+        // console.log(myDate.getHours());
+
+        //DOM STARTS HERE           DOM STARTS HERE               DOM STARTS HERE            DOM STARTS HERE      DOM STARTS HERE//
+
+        // elem = document.getElementById("click").style.border = "2px solid blue"
+        // console.log(elem);                                            
+
+        // elemc = document.getElementsByClassName("click");
+        // elemc[0].style.background = "yellow";                               //changes background of class
+        // elemc[0].classList.add("bg-primary");                                //using classlist.add and .remove to add a class to element
+
+        // console.log(elemc[0].innerHTML);                                           // it give the text written in it
+        // console.log(elemc[0].innerText);                                           // it give the text written in it
+
+        // console.log(document.getElementsByTagName('button'));                           //tag will give which tag is used
+
+        // ce = document.createElement('p');
+        // ce.innerText = "Hi Hoya";                                              //Create an element with DOM also
+        // console.log(ce);
+
+
+        // console.log(document.location);
+        // console.log(document.title);
+        // console.log(document.scripts);
+        // console.log(document.images);
+        // console.log(document.domain);
+
+        // sel = document.querySelector();                                     //selecting using query
+        // sel1 = document.querySelectorAll();
+
+
+        //DOM ENDS HERE           DOM STARTS HERE               DOM STARTS HERE            DOM STARTS HERE      DOM STARTS HERE//
+
+
+        // JS EVENTS                      JS EVENTS            JS EVENTS                JS EVENTS             JS EVENTS         JS EVENTS                      
+
+        // function clicked() {
+        //     console.log('The button is clicked');
+        // }
+
+        // window.onload = function() {
+        //     console.log("The document was loaded");
+        // }
+
+        // click.addEventListener('click', function() {                           //Event listener (can be used w/o writing document.getele)
+        //     console.log("click Hua")
+        // })
+
+        // click.addEventListener('mouseover', function() {                   //Event listener (can be used w/o writing document.getele)
+        //     console.log("click Hua")
+        // })
+
+        // EVENTS: click, mouseover, mouseout, mouseclick, mouseup, mousedown
+
+        //SET-TIME OUT AND SET INTERVAL                 SET-TIME OUT AND SET INTERVAL                SET-TIME OUT AND SET INTERVAL
+
+        //ARROW FUNCTIONS
+        // function sum(a, b) { -------------------> Normal Function
+        //     return a + b;
+        // }
+
+        // sum = (a, b) => {
+        //     return a + b;                     -----------------> Arrow Function
+        // }
+
+        // logkaro = () => {
+        //         console.log("I am log")
+        //     }
+        // c2 = setTimeout(logkaro, 2000);                                   /used when you want some task to do after some time
+        // cl = setInterval(logkaro, 2000);                                  //It will continously do the task after given time
+
+        // clearInterval(cl);  clearTimeout(c2)                                //When we want task to stop on setInterval
+
+
+        //Local Storage             Local Storage                 Local Storage                Local Storage                Local Storage
+        //Helps us save data to users computer as a string
+
+        // localStorage.setItem('name', 'harry')
+        // localStorage.getItem('name')
+        // localStorage.removeItem('name')
+        // localStorage.clear('name')
+
+
+
+        //JSON        JSON             JSON            JSON                  JSON           JSON          JSON            JSON
+
+        // obj = {
+        //     name: "Rishabh",
+        //     length: 1
+        // }
+        // jso = JSON.stringify(obj);                                           //stringify will convert object to string
+        // console.log(jso);
+        // typeof(jso); //Outputs String
+        // parsed = JSON.parse(`{"name":"Rishabh","length":1}`);                //parse wil convert string to object
+        // console.log(parsed); //Outputs object
+
+        //JSON        JSON             JSON            JSON                  JSON           JSON          JSON            JSON
+    </script>
+</body>
+
+</html>
